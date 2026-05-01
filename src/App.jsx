@@ -4,6 +4,9 @@ import './App.css';
 import HeroSection from './components/HeroSection';
 import SmartDashboard from './components/SmartDashboard';
 import GuidedJourney from './components/GuidedJourney';
+import InteractiveTimeline from './components/InteractiveTimeline';
+import Flashcards from './components/Flashcards';
+import SafetyTips from './components/SafetyTips';
 
 function App() {
   const [currentView, setCurrentView] = useState('home'); // 'home', 'journey', 'dashboard'
@@ -75,6 +78,15 @@ function App() {
                    <p style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>Learn how to stay safe and aware of election fraud.</p>
                 </div>
               </div>
+            </section>
+            <section style={{ background: 'var(--white)' }}>
+              <InteractiveTimeline />
+            </section>
+            <section>
+              <Flashcards />
+            </section>
+            <section style={{ background: 'var(--bg-primary)' }}>
+              <SafetyTips />
             </section>
           </>
         )}
