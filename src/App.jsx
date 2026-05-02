@@ -7,6 +7,9 @@ import GuidedJourney from './components/GuidedJourney';
 import InteractiveTimeline from './components/InteractiveTimeline';
 import Flashcards from './components/Flashcards';
 import SafetyTips from './components/SafetyTips';
+import OfficialLinks from './components/OfficialLinks';
+import ElectionQuiz from './components/ElectionQuiz';
+import ChatAssistant from './components/ChatAssistant';
 
 function App() {
   const [currentView, setCurrentView] = useState('home'); // 'home', 'journey', 'dashboard'
@@ -88,6 +91,12 @@ function App() {
             <section style={{ background: 'var(--bg-primary)' }}>
               <SafetyTips />
             </section>
+            <section style={{ background: 'var(--white)' }}>
+              <ElectionQuiz />
+            </section>
+            <section>
+              <OfficialLinks />
+            </section>
           </>
         )}
 
@@ -99,6 +108,8 @@ function App() {
           <GuidedJourney userData={userData} onComplete={() => setCurrentView('home')} />
         )}
       </main>
+
+      <ChatAssistant />
 
       <footer style={{ background: 'var(--navy)', color: 'var(--white)', padding: '2rem 0', textAlign: 'center' }}>
         <div className="container">
